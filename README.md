@@ -67,15 +67,14 @@ pip install -r requirements.txt
 
 Note: transformers and torch are optional — the app will fall back to a simple summary if they are not present. If you want summarization using BART/T5, keep transformers and torch in the environment (they can be large).
 
-4. Place your dataset
+4. Dataset
+The full dataset (`full_dataset.csv`) is too large to upload on GitHub.
+Place it manually in the project root folder before running the app.
 
-Put your CSV dataset in the repository root and ensure the filename matches DATA_PATH in app.py. The loader expects one of these patterns:
+Steps
+1. Download the dataset from https://www.kaggle.com/datasets/saldenisov/recipenlg .
+2. Save it as `full_dataset.csv` in the same folder as `app.py`.
+3. Then run:
+   ```bash
+   streamlit run app.py
 
-NER column containing Python-stringified lists of ingredients (e.g. "['egg', 'milk', 'butter']") or
-
-ingredients column containing comma-separated ingredient strings.
-
-app.py uses full_dataset.csv by default — change DATA_PATH at the top of app.py if needed.
-
-5. Run the Streamlit app
-streamlit run app.py
