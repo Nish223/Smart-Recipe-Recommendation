@@ -1,0 +1,8 @@
+streamlit
+pandas
+scikit-learn
+matplotlib
+# optional - for text summarization (large)
+transformers
+torch
+sentencepiece
